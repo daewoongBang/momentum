@@ -162,6 +162,7 @@ footer {
 #todo-list li label,
 #todo-list li label input {
   margin-right: 8px;
+  cursor: pointer;
 }
 
 #todo-list li label:hover {
@@ -172,6 +173,12 @@ footer {
   border: 0;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
+  color: #ff6347;
+  font-size: 16px;
+}
+
+#todo-list li button:hover {
+  opacity: 0.5;
 }
 
 #greeting {

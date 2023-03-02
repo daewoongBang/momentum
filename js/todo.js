@@ -32,7 +32,7 @@ const addToDo = item => {
   checkBox.type = 'checkbox';
   checkBox.name = 'todo';
 
-  deleteButton.innerText = '❌';
+  deleteButton.innerText = '✘';
   deleteButton.addEventListener('click', deleteToDo);
 
   span.innerText = item.text;
