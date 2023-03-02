@@ -24,17 +24,25 @@ const addToDo = item => {
   const li = document.createElement('li');
   li.id = item.id;
 
+  const label = document.createElement('label');
   const span = document.createElement('span');
+
   const deleteButton = document.createElement('button');
+  const checkBox = document.createElement('input');
+  checkBox.type = 'checkbox';
+  checkBox.name = 'todo';
 
   deleteButton.innerText = '❌';
   deleteButton.addEventListener('click', deleteToDo);
 
   span.innerText = item.text;
 
+  label.appendChild(checkBox);
+  label.appendChild(span);
+
   toDos.push(item);
 
-  li.appendChild(span);
+  li.appendChild(label);
   li.appendChild(deleteButton);
 
   toDoList.appendChild(li);

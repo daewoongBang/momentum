@@ -11,10 +11,9 @@ const getClock = () => {
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
 
-  clock.innerHTML = `
-  ${setClockNumberFormat(hours)} 
-  : ${setClockNumberFormat(minutes)} 
-  : ${setClockNumberFormat(seconds)}`;
+  clock.innerHTML = `${setClockNumberFormat(hours)}:${setClockNumberFormat(
+    minutes
+  )}`;
 };
 
 getClock();

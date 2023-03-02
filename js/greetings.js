@@ -7,7 +7,7 @@ const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
 
 const initGreeting = username => {
-  greeting.innerHTML = `Hello ${username}!`;
+  greeting.innerHTML = `All is well ${username}!`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 };
 
@@ -15,6 +15,15 @@ const onLoginSubmit = event => {
   event.preventDefault();
 
   const username = loginInput.value;
+
+  if (!username) {
+    loginInput.classList.add('validation-name');
+
+    return;
+  } else {
+    loginInput.classList.remove('validation-name');
+  }
+
   loginForm.classList.add(HIDDEN_CLASSNAME);
 
   initGreeting(username);

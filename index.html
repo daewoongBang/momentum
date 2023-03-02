@@ -8,31 +8,53 @@
     <title>Momentum</title>
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input type="text" placeholder="What is your name?" maxlength="15" />
+    <main>
+      <div class="section-1">@Daewoong</div>
 
-      <input type="submit" value="LOGIN" />
-    </form>
+      <div class="section-2">
+        <h1 id="clock">00:00</h1>
 
-    <h2 id="clock">00:00:00</h2>
+        <div>
+          <h1 id="greeting" class="hidden"></h1>
 
-    <h1 id="greeting" class="hidden"></h1>
+          <form id="login-form" class="hidden">
+            <input
+              type="text"
+              placeholder="What is your name?"
+              maxlength="15"
+            />
 
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
+            <input type="submit" value="LOGIN" />
+          </form>
+        </div>
+      </div>
 
-    <ul id="todo-list"></ul>
+      <div class="section-3">
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
 
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
+        <div id="todo-area">
+          <div>
+            <div>TODO</div>
 
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+            <ul id="todo-list"></ul>
+
+            <form id="todo-form">
+              <input type="text" placeholder="Write a To Do" required />
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </footer>
 
     <script src="js/api.js"></script>
     <script src="js/greetings.js"></script>
