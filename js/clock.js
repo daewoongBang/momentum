@@ -1,9 +1,5 @@
 const clock = document.querySelector('#clock');
 
-const setClockNumberFormat = number => {
-  return number.toString().padStart(2, '0');
-};
-
 const getClock = () => {
   const date = new Date();
 
@@ -11,9 +7,7 @@ const getClock = () => {
   const minutes = date.getMinutes();
   const seconds = date.getSeconds();
 
-  clock.innerHTML = `${setClockNumberFormat(hours)}:${setClockNumberFormat(
-    minutes
-  )}`;
+  clock.innerHTML = `${setNumberFormat(hours)}:${setNumberFormat(minutes)}`;
 };
 
 getClock();

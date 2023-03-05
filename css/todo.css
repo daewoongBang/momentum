@@ -1,0 +1,135 @@
+#todo-area {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#todo-area > div {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#todo-area > div > div:first-child {
+  color: #b7b7b7;
+  font-weight: 700;
+}
+
+#dday-form {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#dday-form > div > span {
+  display: inline-block;
+  width: 35px;
+}
+
+#dday-form button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  outline: 0;
+  color: #ffffff;
+}
+
+#dday-form > div:last-child {
+  text-align: center;
+}
+
+#dday-form i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#dday-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#dday-list > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+#dday-list > li > div > span {
+  display: inline-block;
+}
+
+#dday-list > li > div > span:first-child {
+  margin-right: 5px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+#dday-list > li > div > span:last-child {
+  color: #b2b2b2;
+}
+
+#todo-form input,
+#dday-form input {
+  border: 0;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#todo-form input:focus,
+#dday-form input:focus {
+  outline: none;
+}
+
+#todo-form input::placeholder,
+#dday-form input::placeholder {
+  color: #ffffff;
+}
+
+#todo-list,
+#dday-list {
+  list-style: none;
+  padding: 0;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+#todo-list li > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#todo-list li label,
+#todo-list li label input {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+#todo-list li label:hover {
+  color: #a8a8a8;
+}
+
+#todo-list li button,
+#dday-list li button {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  color: #ff6347;
+  font-size: 16px;
+}
+
+#todo-list li button:hover {
+  opacity: 0.5;
+}
+
+input[type='checkbox']:checked + label {
+  color: #808080;
+  text-decoration: line-through;
+}

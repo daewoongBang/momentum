@@ -4,12 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Momentum</title>
   </head>
   <body>
     <main>
-      <div class="section-1">@Daewoong</div>
+      <div class="section-1">
+        <span>@Daewoong</span>
+
+        <div class="config-area hidden">
+          <div id="customize">
+            <h3>CUSTOMIZE</h3>
+
+            <ul>
+              <li>
+                <label for="showDDay">Show D-day</label>
+                <input type="checkbox" id="showDDay" />
+              </li>
+              <li>
+                <label for="showTodo">Show Todo</label>
+                <input type="checkbox" id="showTodo" />
+              </li>
+            </ul>
+          </div>
+
+          <i class="fa-solid fa-gear"></i>
+        </div>
+      </div>
 
       <div class="section-2">
         <h1 id="clock">00:00</h1>
@@ -35,14 +56,50 @@
           <span></span>
         </div>
 
-        <div id="todo-area">
-          <div>
+        <div id="todo-area" class="hidden">
+          <div class="dday-box">
+            <div>D-day</div>
+
+            <ul id="dday-list"></ul>
+
+            <form id="dday-form">
+              <div>
+                <span>Title </span>
+
+                <input
+                  type="text"
+                  class="dday-title"
+                  name="dday-title"
+                  required
+                />
+              </div>
+
+              <div>
+                <span>Date </span>
+
+                <input
+                  type="date"
+                  class="dday-date"
+                  name="dday-date"
+                  required
+                />
+              </div>
+
+              <div>
+                <button type="submit">
+                  <i class="fa-solid fa-square-plus"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="todo-box">
             <div>TODO</div>
 
             <ul id="todo-list"></ul>
 
             <form id="todo-form">
-              <input type="text" placeholder="Write a To Do" required />
+              <input type="text" placeholder="New To Do" required />
             </form>
           </div>
         </div>
@@ -56,12 +113,20 @@
       </div>
     </footer>
 
+    <script src="js/util.js"></script>
     <script src="js/api.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/dday.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/4382bb2da3.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

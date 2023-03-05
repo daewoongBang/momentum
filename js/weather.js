@@ -8,8 +8,23 @@ const onGeoSuccess = position => {
     .then(data => {
       const weather = document.querySelector('#weather span:first-child');
       const city = document.querySelector('#weather span:last-child');
+      const img = document.createElement('img');
+      img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      img.alt = data.weather[0].main;
 
-      weather.innerHTML = `${data.weather[0].main} ${data.main.temp}°`;
+      const divEl = document.createElement('div');
+
+      const temperatureEl = document.createElement('span');
+      temperatureEl.innerText = `${data.main.temp}°`;
+
+      const conditionDescriptionEl = document.createElement('span');
+      conditionDescriptionEl.innerText = data.weather[0].main;
+
+      divEl.appendChild(conditionDescriptionEl);
+      divEl.appendChild(temperatureEl);
+
+      weather.prepend(img);
+      weather.appendChild(divEl);
       city.innerHTML = data.name;
     })
     .catch(error => {

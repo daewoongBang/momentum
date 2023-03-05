@@ -1,3 +1,7 @@
+@import 'todo.css';
+@import 'weather.css';
+@import 'config.css';
+
 main {
   display: flex;
   justify-content: space-evenly;
@@ -16,17 +20,7 @@ main {
 }
 
 .hidden {
-  display: none;
-}
-
-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-  object-fit: cover;
+  display: none !important;
 }
 
 #login-form input[type='text'] {
@@ -59,9 +53,14 @@ img {
 }
 
 .section-1 {
-  display: flex;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
+}
+
+.section-1 > span {
   font-style: italic;
 }
 
@@ -85,22 +84,6 @@ img {
   height: 100vh;
 }
 
-#weather {
-  flex: 0.3;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-#weather span:first-child {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-#todo-area {
-  flex: 0.7;
-}
-
 #quote {
   display: flex;
   flex-direction: column;
@@ -118,67 +101,6 @@ footer {
   bottom: 0;
   color: #ffffff;
   width: 100%;
-}
-
-#todo-area > div {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  border-radius: 4px;
-}
-
-#todo-area > div > div:first-child {
-  color: #b7b7b7;
-  font-weight: 700;
-}
-
-#todo-form input {
-  border: 0;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#todo-form input:focus {
-  outline: none;
-}
-
-#todo-form input::placeholder {
-  color: #ffffff;
-}
-
-#todo-list {
-  list-style: none;
-  padding: 0;
-}
-
-#todo-list li {
-  display: flex;
-  justify-content: space-between;
-}
-
-#todo-list li label,
-#todo-list li label input {
-  margin-right: 8px;
-  cursor: pointer;
-}
-
-#todo-list li label:hover {
-  color: #a8a8a8;
-}
-
-#todo-list li button {
-  border: 0;
-  background-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
-  color: #ff6347;
-  font-size: 16px;
-}
-
-#todo-list li button:hover {
-  opacity: 0.5;
 }
 
 #greeting {

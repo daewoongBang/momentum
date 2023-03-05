@@ -12,8 +12,9 @@ const saveToDos = () => {
 
 const deleteToDo = event => {
   const li = event.target.parentElement;
+  const inputEl = li.querySelector('input');
 
-  toDos = toDos.filter(item => item.id.toString() !== li.id);
+  toDos = toDos.filter(item => item.id.toString() !== inputEl.id);
 
   saveToDos();
 
@@ -21,29 +22,30 @@ const deleteToDo = event => {
 };
 
 const addToDo = item => {
+  const spanEl = document.createElement('span');
+
   const li = document.createElement('li');
-  li.id = item.id;
 
   const label = document.createElement('label');
-  const span = document.createElement('span');
+  label.htmlFor = item.id;
+  label.innerText = item.text;
 
-  const deleteButton = document.createElement('button');
   const checkBox = document.createElement('input');
   checkBox.type = 'checkbox';
+  checkBox.id = item.id;
   checkBox.name = 'todo';
 
+  const deleteButton = document.createElement('button');
   deleteButton.innerText = '✘';
   deleteButton.addEventListener('click', deleteToDo);
 
-  span.innerText = item.text;
+  spanEl.appendChild(checkBox);
+  spanEl.appendChild(label);
 
-  label.appendChild(checkBox);
-  label.appendChild(span);
+  li.appendChild(spanEl);
+  li.appendChild(deleteButton);
 
   toDos.push(item);
-
-  li.appendChild(label);
-  li.appendChild(deleteButton);
 
   toDoList.appendChild(li);
 };

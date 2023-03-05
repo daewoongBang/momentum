@@ -1,0 +1,46 @@
+.section-1 > div {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  z-index: 5;
+}
+
+.section-1 > div > i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#customize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1px 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#customize > ul {
+  list-style: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+#customize > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#customize > ul > li > label {
+  color: #d1d1d1;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#customize > ul > li > input {
+  width: 20px;
+  height: 20px;
+}
